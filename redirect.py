@@ -19,7 +19,7 @@ worksheets = """
 0xc9db508bb80446d2b66cbc8e2c74c052
 """
 
-# wget -q --no-check-certificate https://competitions.dev.see4c.eu/competitions -O - | grep competitionID.*value
+# wget -q --no-check-certificate https://competitions.see4c.eu/competitions -O - | grep competitionID.*value
 competitions = """
 6991
 6981
@@ -63,11 +63,11 @@ def create_redirect(items, base_path, host):
         with open(os.path.join(base_path, item, 'index.html'), 'w') as f:
             print >>f, '<meta http-equiv="refresh" content="0; url=https://%s">' % web_path
 
-create_redirect('worksheets', '', 'worksheets.dev.see4c.eu')
-create_redirect(worksheets, 'worksheets', 'worksheets.dev.see4c.eu')
+create_redirect('worksheets', '', 'worksheets.see4c.eu')
+create_redirect(worksheets, 'worksheets', 'worksheets.see4c.eu')
 
-create_redirect('competitions', 'competitions', 'competitions.dev.see4c.eu')
-create_redirect('AutoML', '', 'competitions.dev.see4c.eu/competitions/2321')
-create_redirect('automl', '', 'competitions.dev.see4c.eu/competitions/2321')
-create_redirect(competitions, 'competitions', 'competitions.dev.see4c.eu')
-create_redirect(forums, 'forums', 'competitions.dev.see4c.eu')
+create_redirect('competitions', 'competitions', 'competitions.see4c.eu')
+create_redirect('AutoML', '', 'competitions.see4c.eu/competitions/2321')
+create_redirect('automl', '', 'competitions.see4c.eu/competitions/2321')
+create_redirect(competitions, 'competitions', 'competitions.see4c.eu')
+create_redirect(forums, 'forums', 'competitions.see4c.eu')
